@@ -2,9 +2,13 @@ from utils import generate
 from system_prompt import system_prompt
 from parser import parse_llm_json
 from tools import TOOLS , calculator,save_note,web_search,get_datetime
+from memory import add_memory , get_memory
 
 def baseagent(user_input):
     Systemprompt = system_prompt()
+
+    mem_context = get_memory()
+
     observation = ""
     history = ""
 
@@ -12,6 +16,9 @@ def baseagent(user_input):
         full_prompt = f"""
 
         {Systemprompt}
+
+        Conversation memory:
+        {mem_context}
 
         USER TASK:
         {user_input}
@@ -59,7 +66,8 @@ def baseagent(user_input):
         agent_inp = get_data.get("input")
 
         if action == "finish":
-            print(f"final answer ---------------------------------")
+            print(f"final answer with  observation {observation}")
+            add_memory(user_input,agent_inp)
             return agent_inp
 
         tool = TOOLS.get(action)
@@ -69,13 +77,6 @@ def baseagent(user_input):
         else:
             observation = "unknown action"
 
-        print(f"step {steps+1}")
-
-        print(f"think : {thought}")
-        print(f"action : {action}")
-        print(f"process : {agent_inp}")
-        print(f"observation : {observation}")
-
         history+= f"""
         step: {steps+1}
         thought: "{thought}"
@@ -83,12 +84,11 @@ def baseagent(user_input):
         input: "{agent_inp}"
         observation: "{observation}"
         """
+
+
+
     return observation
 
-while True:
-    user_input = input("you: ")
-    response = baseagent(user_input)
-    print(f"Agent:: {response}")
 
 
 

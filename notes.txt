@@ -15,3 +15,6 @@ Emerging/High-Priority Roles:
 General Demand Areas:
 - AI, ML, Data Analytics, and Cloud Technologies positions are increasing.
 - Focus on specialized tech roles to stay ahead of the curve.
+[NOTE] User's name is not provided in the task and cannot be determined from the available information.
+[NOTE] Satya is a user who is an AI engineer.
+[NOTE] user_name: satya

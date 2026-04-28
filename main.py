@@ -2,10 +2,9 @@ from agent import baseagent
 
 
 def ask_agent(user_input):
-    try:
-        output = baseagent(user_input)
-    except:
-        print("loop is broken!")
+
+    output = baseagent(user_input)
+
 
     return output
 
