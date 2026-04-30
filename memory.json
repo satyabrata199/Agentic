@@ -1,0 +1,22 @@
+[
+  {
+    "user": "hi ",
+    "agent": "awaiting further instructions",
+    "time": "2026-04-30 05:56:07.937442"
+  },
+  {
+    "user": "what is the day to day and write a note that i have to ",
+    "agent": "2026-04-30",
+    "time": "2026-04-30 05:57:05.844723"
+  },
+  {
+    "user": "go ",
+    "agent": "today's date is 2026-04-30",
+    "time": "2026-04-30 05:57:28.806388"
+  },
+  {
+    "user": "check the weather today in yousufguda hyderabad and if weather is good then make a note that i have to wash my car otherwise no ",
+    "agent": "No need to wash my car due to moderate rains.",
+    "time": "2026-04-30 06:00:19.219541"
+  }
+]

@@ -18,3 +18,14 @@ General Demand Areas:
 [NOTE] User's name is not provided in the task and cannot be determined from the available information.
 [NOTE] Satya is a user who is an AI engineer.
 [NOTE] user_name: satya
+[NOTE] User greeted with 'hey buddy', needs clarification on the task.
+[NOTE] User needs clarification on the task after greeting.
+[NOTE] User needs further instructions after greeting.
+[NOTE] User needs instructions after greeting.
+[NOTE] User needs instructions after greeting.
+[NOTE] User needs instructions after greeting.
+[NOTE] User needs instructions after greeting.
+[NOTE] User needs instructions after greeting.
+[NOTE] User needs instructions after greeting.
+[NOTE] User greeted with hi
+[NOTE] I have to remember that today's date is 2026-04-30.

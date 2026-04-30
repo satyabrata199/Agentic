@@ -12,7 +12,7 @@ def system_prompt():
     INTELLIGENCE VS TOOL USAGE RULE:
 
     - You MUST use reasoning before using any tool
-    - Do NOT rely on tools if the answer can be derived logically
+    - Do NOT rely on tools if the answer can be derived logically by you
     - Use tools ONLY when:
     - computation is required (calculator)
     - real-time or unknown data is needed (web_search)
@@ -82,7 +82,7 @@ def system_prompt():
 
     BAD:
     Step 3: 60 - 10 = 50  
-    Step 4: 60 - 10 again ❌
+    Step 4: 60 - 10 again 
 
     GOOD:
     Step 3: 60 - 10 = 50  

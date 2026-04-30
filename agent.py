@@ -12,7 +12,15 @@ def baseagent(user_input):
     observation = ""
     history = ""
 
+    prev_step = None
+    prev_observation = None
+    repeat_count = 0
+    MAX_REPEATS = 2
+
     for steps in range(10):
+        
+        mem_context = get_memory()
+        #full prompt----------
         full_prompt = f"""
 
         {Systemprompt}
@@ -58,6 +66,8 @@ def baseagent(user_input):
         Return ONLY one valid JSON object.
 
         """
+        # parsing to llm -----------------
+
         output = generate(full_prompt)
         get_data = parse_llm_json(output)
 
@@ -65,6 +75,24 @@ def baseagent(user_input):
         action = get_data.get("action")
         agent_inp = get_data.get("input")
 
+        # fall back loop logic ------------
+        current_step = (action, agent_inp)
+        if current_step == prev_step:
+            repeat_count += 1
+        else:
+            repeat_count = 0
+
+        if prev_observation == observation:
+            repeat_count += 1
+
+        if repeat_count >= MAX_REPEATS:
+            print("Loop detected → forcing finish")
+
+            final_answer = observation if observation else agent_inp
+            add_memory(user_input, final_answer)
+            return final_answer
+
+        # tool calling logic -------------------
         if action == "finish":
             print(f"final answer with  observation {observation}")
             add_memory(user_input,agent_inp)
@@ -77,6 +105,7 @@ def baseagent(user_input):
         else:
             observation = "unknown action"
 
+        # History and observation (work memory)
         history+= f"""
         step: {steps+1}
         thought: "{thought}"
