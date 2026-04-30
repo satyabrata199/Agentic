@@ -1,6 +1,8 @@
 import os
 import json
-import datetime
+import datetime 
+from embedding import embedding_model
+
 
 MEMORY_FILE = "memory.json"
 MAX_MEMORY = 100

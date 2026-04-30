@@ -29,3 +29,5 @@ General Demand Areas:
 [NOTE] User needs instructions after greeting.
 [NOTE] User greeted with hi
 [NOTE] I have to remember that today's date is 2026-04-30.
+[NOTE] Satya is an AI developer and backend engineer.
+[NOTE] Satya is an AI developer and backend engineer.

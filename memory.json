@@ -18,5 +18,35 @@
     "user": "check the weather today in yousufguda hyderabad and if weather is good then make a note that i have to wash my car otherwise no ",
     "agent": "No need to wash my car due to moderate rains.",
     "time": "2026-04-30 06:00:19.219541"
+  },
+  {
+    "user": "hey my name is satya and iam an ai developer and backend engineer ",
+    "agent": "",
+    "time": "2026-04-30 06:03:06.641618"
+  },
+  {
+    "user": "what is my name ?",
+    "agent": "satya",
+    "time": "2026-04-30 06:04:12.193242"
+  },
+  {
+    "user": "and what is my profile",
+    "agent": "satya, ai developer, backend engineer",
+    "time": "2026-04-30 06:04:43.816908"
+  },
+  {
+    "user": "hi whatsup ?",
+    "agent": "hi whatsup?",
+    "time": "2026-04-30 21:32:53.883568"
+  },
+  {
+    "user": "im good what is special abput today ",
+    "agent": "Events in Hyderabad Today: Things to do in Hyderabad Today - All things to do in Hyderabad today - listing for dance, music, theatre, literary, nightlife, arts, sports, talk, workshop, technology, concert, festival, food, campus, competition and more events, only on fullhyd.com.",
+    "time": "2026-04-30 21:34:27.083403"
+  },
+  {
+    "user": "do you know my name and profile ",
+    "agent": "satya, ai developer, backend engineer",
+    "time": "2026-04-30 21:35:55.858312"
   }
 ]
